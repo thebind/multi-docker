@@ -32,9 +32,9 @@ https://aws.amazon.com/jp/ecs/
 https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html
 
 https://console.aws.amazon.com/elasticbeanstalk/home?region=us-east-1#/welcome
+ 
 
-
-# VPC (Virtual Private Cloud)
+# VPC (Virtual  Private Cloud)
 Your VPCs
 -- Postgres & Redis を結びつける
 
@@ -52,6 +52,7 @@ Service -> VPC
 -> Security Group
 
 9. Elastic Beans Talk
+
 
 
 
