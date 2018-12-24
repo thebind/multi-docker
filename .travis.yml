@@ -1,0 +1,22 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t thebind/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run thebind/react-test npm test -- -- coverage
+
+after_sucess:
+  - docker build -t thebind/multi-client ./client
+  - docker build -t thebind/multi-nginx ./nginx
+  - docker build -t thebind/multi-server ./server
+  - docker build -t thebind/multi-worker ./worker
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hub
+  - docker push thebind/multi-client
+  - docker push thebind/multi-nginx
+  - docker push thebind/multi-server
+  - docker push thebind/multi-worker

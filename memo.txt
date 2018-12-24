@@ -9,3 +9,24 @@ $ docker-compose up
 
 
 
+# 1. Mulit Docker Setting
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/thebind/multi-docker.git
+git remoto -v
+git push origin master
+
+# 2. Travis
+# go to https://travis-ci.org/
+# travis ci のプロジェクトをONにする
+
+# 3. Docker Login
+username: speakaut
+password: ********
+
+
+
+
+
+
