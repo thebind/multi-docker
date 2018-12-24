@@ -1,0 +1,11 @@
+# Client / Server / Worker
+$ cd client
+$ docker build -f Dockerfile.dev .
+$ docker run <coitainer id>
+
+
+# Docker Compose
+$ docker-compose up
+
+
+
