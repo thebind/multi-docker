@@ -8,7 +8,7 @@ before_install:
 script:
   - docker run thebind/react-test npm test -- --coverage
 
-after_sucess:
+after_success:
   - docker build -t thebind/multi-client ./client
   - docker build -t thebind/multi-nginx ./nginx
   - docker build -t thebind/multi-server ./server
